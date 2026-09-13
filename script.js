@@ -1,3 +1,101 @@
+// ---- Menu rendering ----
+(function () {
+  const sections = window.ROLINE_MENU;
+  const tabsEl = document.querySelector('.menu-tabs');
+  const panesEl = document.querySelector('.menu-panels');
+  if (!sections || !tabsEl || !panesEl) return;
+
+  function buildItem(item) {
+    const li = document.createElement('li');
+    li.className = 'menu-item';
+    const row = document.createElement('div');
+    row.className = 'menu-item-row';
+    const name = document.createElement('span');
+    name.className = 'menu-item-name';
+    name.textContent = item.name;
+    const dots = document.createElement('span');
+    dots.className = 'menu-item-dots';
+    dots.setAttribute('aria-hidden', 'true');
+    const price = document.createElement('span');
+    price.className = 'menu-item-price';
+    price.textContent = item.price;
+    row.append(name, dots, price);
+    li.appendChild(row);
+    if (item.desc) {
+      const d = document.createElement('p');
+      d.className = 'menu-item-desc';
+      d.textContent = item.desc;
+      li.appendChild(d);
+    }
+    return li;
+  }
+
+  function buildGroup(group) {
+    const wrap = document.createElement('div');
+    wrap.className = 'menu-group';
+    if (group.title) {
+      const h = document.createElement('h3');
+      h.className = 'menu-group-title';
+      h.textContent = group.title;
+      wrap.appendChild(h);
+    }
+    if (group.note) {
+      const p = document.createElement('p');
+      p.className = 'menu-group-note';
+      p.textContent = group.note;
+      wrap.appendChild(p);
+    }
+    const ul = document.createElement('ul');
+    ul.className = 'menu-list';
+    group.items.forEach((it) => ul.appendChild(buildItem(it)));
+    wrap.appendChild(ul);
+    return wrap;
+  }
+
+  function buildPanel(sec) {
+    const div = document.createElement('div');
+    div.className = 'menu-panel';
+    div.id = 'menu-panel-' + sec.id;
+    div.dataset.menu = sec.id;
+    sec.groups.forEach((g) => div.appendChild(buildGroup(g)));
+    return div;
+  }
+
+  sections.forEach((sec) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'menu-tab';
+    btn.textContent = sec.label;
+    btn.dataset.menu = sec.id;
+    btn.addEventListener('click', () => select(sec.id));
+    tabsEl.appendChild(btn);
+  });
+
+  sections.forEach((sec) => panesEl.appendChild(buildPanel(sec)));
+
+  function select(id) {
+    tabsEl.querySelectorAll('.menu-tab').forEach((b) => {
+      const on = b.dataset.menu === id;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    panesEl.querySelectorAll('.menu-panel').forEach((p) => {
+      const show = p.dataset.menu === id;
+      if (show) {
+        p.classList.remove('hidden');
+        p.classList.remove('fade-in');
+        void p.offsetWidth; // restart the fade animation
+        p.classList.add('fade-in');
+      } else {
+        p.classList.add('hidden');
+        p.classList.remove('fade-in');
+      }
+    });
+  }
+
+  select('dinner');
+})();
+
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 
@@ -19,6 +117,9 @@ if (window.gsap && window.ScrollTrigger) {
       '.intro-grid > *',
       '.flavours-top > *',
       '.flavour-card',
+      '.menu-head > *',
+      '.menu-tabs',
+      '.menu-panel',
       '.occasion-image',
       '.occasion-copy > *',
       '.reservation-intro > *',
@@ -28,12 +129,26 @@ if (window.gsap && window.ScrollTrigger) {
       '.site-footer > *'
     ];
 
+    // Every reveal tween is registered per element so the safety observer
+    // below can force-play it if its scroll trigger never fires.
+    const pendingReveals = new Map();
+
     revealGroups.forEach((selector) => {
-      gsap.from(selector, {
+      const tween = gsap.from(selector, {
         scrollTrigger: {
           trigger: selector,
           start: 'top 86%',
-          once: true
+          once: true,
+          onRefresh: (self) => {
+            // Elements near the bottom of the page can get a start position
+            // beyond the maximum scroll offset (the menu makes the page very
+            // tall). Such a trigger would never fire and the content would
+            // stay invisible forever, so clamp the start back into range.
+            const max = ScrollTrigger.maxScroll(window);
+            if (self.start > max - 2) {
+              self.start = max - 2;
+            }
+          }
         },
         y: 24,
         opacity: 0,
@@ -41,7 +156,22 @@ if (window.gsap && window.ScrollTrigger) {
         stagger: 0.06,
         ease: 'power2.out'
       });
+      gsap.utils.toArray(selector).forEach((element) => pendingReveals.set(element, tween));
     });
+
+    // Safety net: if a reveal element becomes visible while its tween has
+    // not started yet (e.g. its trigger could never fire), play it anyway.
+    // IntersectionObserver does not depend on GSAP's scroll calculations.
+    const revealSafety = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const tween = pendingReveals.get(entry.target);
+        if (tween && tween.progress() === 0 && !tween.isActive()) {
+          tween.play(0);
+        }
+      });
+    }, { threshold: 0.04 });
+    pendingReveals.forEach((tween, element) => revealSafety.observe(element));
 
     gsap.utils.toArray('.button, .text-link, .header-cta, .site-nav a').forEach((element) => {
       const lift = element.matches('.button') ? -3 : -1;
