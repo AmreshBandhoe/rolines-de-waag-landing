@@ -119,7 +119,7 @@ if (window.gsap && window.ScrollTrigger) {
       '.flavour-card',
       '.menu-head > *',
       '.menu-tabs',
-      '.menu-panel',
+      '.menu-panels',
       '.occasion-image',
       '.occasion-copy > *',
       '.reservation-intro > *',
