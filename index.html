@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Roline's De Waag: a restaurant, bar, terrace and private-dining venue at Waterkant 5, Paramaribo." />
+    <title>Roline's De Waag | Paramaribo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Roline's De Waag home">
+        <span>Roline's</span><small>DE WAAG</small>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#about">The house</a>
+        <a href="#flavours">At the table</a>
+        <a href="#occasions">Gather here</a>
+        <a href="#reserve">Reserve</a>
+        <a href="#visit">Find us</a>
+      </nav>
+      <a class="header-cta" href="#reserve">Book a table <span>↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Waterkant 5 · Paramaribo</p>
+          <h1 id="hero-title">A table with a<br /><em>point of view.</em></h1>
+          <p class="hero-intro">Authentic Surinamese flavours, international favourites, and an easy reason to stay for another round.</p>
+          <a class="button button-light" href="#reserve">Place a reservation <span>→</span></a>
+        </div>
+        <div class="hero-art" aria-label="Dishes, drinks and the bar at Roline's De Waag">
+          <div class="hero-photo photo-food"></div>
+          <div class="hero-photo photo-drink"></div>
+          <div class="hero-photo photo-bar"></div>
+          <p class="image-note">The warmth is in the details.</p>
+        </div>
+        <div class="hero-scroll">Scroll to discover <span></span></div>
+      </section>
+
+      <section id="about" class="intro section-wrap">
+        <p class="section-kicker">Not just dinner</p>
+        <div class="intro-grid">
+          <h2>For long lunches, bright evenings, and the occasions worth dressing for.</h2>
+          <div class="intro-copy">
+            <p>Roline's De Waag brings people together over soulful cooking, considered cocktails, and the rhythm of the Waterkant.</p>
+            <a class="text-link" href="#occasions">Discover the venue <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="flavours" class="flavours">
+        <div class="section-wrap flavours-top">
+          <p class="section-kicker">At the table</p>
+          <p>Familiar Surinamese dishes meet a kitchen that likes to travel. Start somewhere delicious and let the evening decide the rest.</p>
+        </div>
+        <div class="flavour-cards section-wrap">
+          <article class="flavour-card card-image card-kitchen" aria-label="A plated steak dish"><div class="card-copy"><span>01</span><h3>From the kitchen</h3><p>Generous plates, full of flavour.</p></div></article>
+          <article class="flavour-card card-image card-linger" aria-label="A table set for lingering"><div class="card-image-fill"></div><div class="card-copy"><span>02</span><h3>Made to linger over</h3><p>Good food, generous company, and one more round.</p></div></article>
+          <article class="flavour-card card-image card-bar" aria-label="A bartender preparing a cocktail"><div class="card-copy"><span>03</span><h3>From the bar</h3><p>Well-balanced cocktails, poured with a little theatre.</p></div></article>
+        </div>
+      </section>
+
+      <section id="occasions" class="occasions section-wrap">
+        <div class="occasion-image" aria-label="Friends gathering at Roline's De Waag">
+          <div class="occasion-slide active" style="background-image:url('Afbeeldingen/659774366_963594126204005_5778358983752804853_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/658149259_963594346203983_236919956082679564_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/661633721_963594409537310_3972910032539082443_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/662514888_963594259537325_2171400794174784862_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/753668345_18056928977773285_292714517488220884_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/656778363_959430816620336_6535832633254638546_n.jpg');"></div>
+          <div class="occasion-slide" style="background-image:url('Afbeeldingen/722974374_1024508543445896_2102648398245393093_n.jpg');"></div>
+        </div>
+        <div class="occasion-copy">
+          <p class="section-kicker">Gather here</p>
+          <h2>Your people,<br />your <em>occasion.</em></h2>
+          <p>From after-work drinks to intimate celebrations and private dining, we make space for the moments that deserve attention.</p>
+          <a class="button button-dark" href="#visit">Ask about private dining <span>→</span></a>
+        </div>
+      </section>
+
+      <section id="reserve" class="reservation section-wrap" aria-labelledby="reserve-title">
+        <div class="reservation-intro">
+          <p class="section-kicker">Reserve</p>
+          <h2 id="reserve-title">Plan your evening with us.</h2>
+          <p>Choose your date, preferred time, and the mood you want to set. We’ll take it from there.</p>
+        </div>
+
+        <form id="reservation-form" class="reservation-form">
+          <div class="field-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your@email.com" required />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              <span>Date</span>
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              <span>Time</span>
+              <input type="time" name="time" required />
+            </label>
+            <label>
+              <span>Guests</span>
+              <select name="guests" required>
+                <option value="">Select</option>
+                <option value="2 Guests">2 Guests</option>
+                <option value="4 Guests">4 Guests</option>
+                <option value="6 Guests">6 Guests</option>
+                <option value="8 Guests">8 Guests</option>
+                <option value="10+ Guests">10+ Guests</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Notes</span>
+            <textarea name="notes" rows="4" placeholder="Tell us about your occasion, seating preference, or any special requests."></textarea>
+          </label>
+
+          <div class="reservation-actions">
+            <button class="button button-dark" type="submit">Place reservation <span>→</span></button>
+            <a class="text-link" href="tel:+597520333">Or call +597 520333 <span>→</span></a>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="visit" class="visit">
+        <div class="visit-copy">
+          <p class="section-kicker">Come by</p>
+          <h2>Waterkant 5,<br /><em>Paramaribo.</em></h2>
+          <p>Restaurant · Bar · Terrace · Private dining</p>
+          <div class="visit-actions">
+            <a class="button button-light" href="tel:+597520333">Call +597 520333 <span>→</span></a>
+            <a class="button button-light" href="https://www.instagram.com/rolinesdewaag" target="_blank" rel="noreferrer">Follow on Instagram <span>↗</span></a>
+            <a class="text-link light-link" href="https://www.facebook.com/profile.php?id=100076602788159" target="_blank" rel="noreferrer">Visit Facebook <span>↗</span></a>
+          </div>
+        </div>
+        <p class="visit-side">Come hungry. Leave with a story.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-mark" href="#top"><span>Roline's</span><small>DE WAAG</small></a>
+      <p>Authentic Surinamese and international cuisine.</p>
+      <a class="text-link" href="#top">Back to top <span>↑</span></a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+;/*FB_PKG_DELIM*/
+
+__d("FriendListCometCloseFriendsStrings",["fbt"],(function(t,n,r,o,a,i,l,s){"use strict";function e(){return s._(/*BTDS*/"Beste vrienden beheren")}function u(){return s._(/*BTDS*/"Beheren")}l.manageCloseFriendsLabel=e,l.manageLabel=u}),226);
+__d("FriendListCometItemAddRemoveListDialogQuery_facebookRelayOperation",[],(function(t,n,r,o,a,i){a.exports="8708214199281048"}),null);
+__d("FriendListCometItemAddRemoveListDialogQuery$Parameters",["FriendListCometItemAddRemoveListDialogQuery_facebookRelayOperation"],(function(t,n,r,o,a,i){"use strict";var e={kind:"PreloadableConcreteRequest",params:{id:n("FriendListCometItemAddRemoveListDialogQuery_facebookRelayOperation"),metadata:{},name:"FriendListCometItemAddRemoveListDialogQuery",operationKind:"query",text:null}};a.exports=e}),null);
+__d("FriendListCometItemAddRemoveListDialog.entrypoint",["FriendListCometItemAddRemoveListDialogQuery$Parameters","JSResourceForInteraction"],(function(t,n,r,o,a,i,l){"use strict";var e={getPreloadProps:function(t){var e=t.listID;return{queries:{dialogQueryReference:{parameters:n("FriendListCometItemAddRemoveListDialogQuery$Parameters"),variables:{list:e}}}}},root:r("JSResourceForInteraction")("FriendListCometItemAddRemoveListDialog.react").__setRef("FriendListCometItemAddRemoveListDialog.entrypoint")};l.default=e}),98);
