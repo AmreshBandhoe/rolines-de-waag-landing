@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Roline's De Waag: a restaurant, bar, terrace and private-dining venue at Waterkant 5, Paramaribo." />
+    <meta name="description" content="Roline's De Waag: restaurant, bar, terras en privédining in het waaggebouw uit 1824 aan Waterkant 5, Paramaribo — onderdeel van de historische binnenstad op de UNESCO-werelderfgoedlijst." />
     <title>Roline's De Waag | Paramaribo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,75 +12,120 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Roline's De Waag home">
+      <a class="wordmark" href="#top" aria-label="Roline's De Waag home" data-i18n-attr="aria-label:wordmark.aria">
         <span>Roline's</span><small>DE WAAG</small>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">The house</a>
-        <a href="#flavours">At the table</a>
-        <a href="#menu">Menu</a>
-        <a href="#occasions">Gather here</a>
-        <a href="#reserve">Reserve</a>
-        <a href="#visit">Find us</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menuToggle">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Hoofdnavigatie" data-i18n-attr="aria-label:nav.ariaLabel">
+        <a href="#about" data-i18n="nav.house">Het huis</a>
+        <a href="#history" data-i18n="nav.since">Sinds 1824</a>
+        <a href="#flavours" data-i18n="nav.table">Aan tafel</a>
+        <a href="#menu" data-i18n="nav.menu">Menukaart</a>
+        <a href="#occasions" data-i18n="nav.gather">Onderons</a>
+        <a href="#reserve" data-i18n="nav.reserve">Reserveren</a>
+        <a href="#visit" data-i18n="nav.visit">Vind ons</a>
       </nav>
-      <a class="header-cta" href="#reserve">Book a table <span>↗</span></a>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Taal kiezen" data-i18n-attr="aria-label:lang.aria">
+          <button type="button" class="lang-btn active" data-lang="nl" aria-pressed="true">NL</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="header-cta" href="#reserve" data-i18n="cta.book">Tafel reserveren <span>↗</span></a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Waterkant 5 · Paramaribo</p>
-          <h1 id="hero-title">A table with a<br /><em>point of view.</em></h1>
-          <p class="hero-intro">Authentic Surinamese flavours, international favourites, and an easy reason to stay for another round.</p>
-          <a class="button button-light" href="#reserve">Place a reservation <span>→</span></a>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Waterkant 5 · Paramaribo · Sinds 1824</p>
+          <h1 id="hero-title" data-i18n="hero.title">Twee eeuwen,<br /><em>één lange tafel.</em></h1>
+          <p class="hero-intro" data-i18n="hero.intro">Hartverwarmende Surinaamse keuken en internationale klassiekers, in het waaggebouw uit 1824 aan de Waterkant van Paramaribo — UNESCO-werelderfgoed.</p>
+          <a class="button button-light" href="#reserve" data-i18n="hero.cta">Maak een reservering <span>→</span></a>
         </div>
-        <div class="hero-art" aria-label="Dishes, drinks and the bar at Roline's De Waag">
+        <div class="hero-art" aria-label="Gerechten, drankjes en de bar bij Roline's De Waag" data-i18n-attr="aria-label:hero.artAria">
           <div class="hero-photo photo-food"></div>
           <div class="hero-photo photo-drink"></div>
           <div class="hero-photo photo-bar"></div>
-          <p class="image-note">The warmth is in the details.</p>
+          <p class="image-note" data-i18n="hero.note">De warmte zit in de details.</p>
         </div>
-        <div class="hero-scroll">Scroll to discover <span></span></div>
+        <div class="hero-scroll" data-i18n="hero.scroll">Scroll en ontdek <span></span></div>
       </section>
 
       <section id="about" class="intro section-wrap">
-        <p class="section-kicker">Not just dinner</p>
+        <p class="section-kicker" data-i18n="about.kicker">Meer dan diner</p>
         <div class="intro-grid">
-          <h2>For long lunches, bright evenings, and the occasions worth dressing for.</h2>
+          <h2 data-i18n="about.title">Voor lange lunchen, lichte avonden en gelegenheden waarvoor je je graag opmaakt.</h2>
           <div class="intro-copy">
-            <p>Roline's De Waag brings people together over soulful cooking, considered cocktails, and the rhythm of the Waterkant.</p>
-            <a class="text-link" href="#occasions">Discover the venue <span>↗</span></a>
+            <p data-i18n="about.copy">Roline's De Waag brengt mensen samen rond smaakvolle gerechten, doordachte cocktails en het ritme van de Waterkant.</p>
+            <a class="text-link" href="#occasions" data-i18n="about.link">Ontdek het pand <span>↗</span></a>
           </div>
         </div>
       </section>
-
-      <section id="flavours" class="flavours">
-        <div class="section-wrap flavours-top">
-          <p class="section-kicker">At the table</p>
-          <p>Familiar Surinamese dishes meet a kitchen that likes to travel. Start somewhere delicious and let the evening decide the rest.</p>
-        </div>
-        <div class="flavour-cards section-wrap">
-          <article class="flavour-card card-image card-kitchen" aria-label="A plated steak dish"><div class="card-copy"><span>01</span><h3>From the kitchen</h3><p>Generous plates, full of flavour.</p></div></article>
-          <article class="flavour-card card-image card-linger" aria-label="A table set for lingering"><div class="card-image-fill"></div><div class="card-copy"><span>02</span><h3>Made to linger over</h3><p>Good food, generous company, and one more round.</p></div></article>
-          <article class="flavour-card card-image card-bar" aria-label="A bartender preparing a cocktail"><div class="card-copy"><span>03</span><h3>From the bar</h3><p>Well-balanced cocktails, poured with a little theatre.</p></div></article>
+      <section id="history" class="history section-wrap">
+        <div class="history-grid">
+          <div class="history-art" aria-label="Historische beelden van het waaggebouw door de eeuwen heen" data-i18n-attr="aria-label:history.artAria">
+            <figure class="history-frame active">
+              <div class="history-img" role="img" aria-label="Prent van de Staatswaag aan de Waterkant, met vrachtrijder en ossenkar, 19e eeuw" data-i18n-attr="aria-label:history.imgAria1" style="background-image:url('Afbeeldingen/SR171o_Staatswaag;_een_boschneger_met_zijn_karn;_een_vrachtrijder_met_zijn_kar.jpg');"></div>
+              <figcaption data-i18n="history.caption1">De Staatswaag aan de Waterkant, met vrachtrijder en ossenkar · 19e-eeuwse prent</figcaption>
+            </figure>
+            <figure class="history-frame">
+              <div class="history-img" role="img" aria-label="Litho van het nieuwe waaggebouw en de haven aan de Surinamerivier, circa 1824" data-i18n-attr="aria-label:history.imgAria2" style="background-image:url('Afbeeldingen/waag-litho-1824.jpg');"></div>
+              <figcaption data-i18n="history.caption2">Het nieuwe Waaggebouw en de haven, c.&nbsp;1824 · Rijksdienst voor het Cultureel Erfgoed, CC&nbsp;BY-SA</figcaption>
+            </figure>
+            <figure class="history-frame">
+              <div class="history-img" role="img" aria-label="Het vervallen waaggebouw aan de Waterkant, na de sluiting van de haven" data-i18n-attr="aria-label:history.imgAria3" style="background-image:url('Afbeeldingen/derelict.jpg');"></div>
+              <figcaption data-i18n="history.caption3">Het Waaggebouw in verval, na de havenverhuizing · Rijksdienst voor het Cultureel Erfgoed</figcaption>
+            </figure>
+            <figure class="history-frame">
+              <div class="history-img" role="img" aria-label="Het gerestaureerde witte waaggebouw aan de Waterkant, na de restauratie van 2002" data-i18n-attr="aria-label:history.imgAria4" style="background-image:url('Afbeeldingen/De_Waag_(15976032282).jpg');"></div>
+              <figcaption data-i18n="history.caption4">Het gerestaureerde Waaggebouw aan de Waterkant, na 2002</figcaption>
+            </figure>
+            <figure class="history-frame">
+              <div class="history-img" role="img" aria-label="De gevelsteen van 1824 in de voorgevel van het waaggebouw" data-i18n-attr="aria-label:history.imgAria5" style="background-image:url('Afbeeldingen/7618561966_06988756a1_b.jpg');"></div>
+              <figcaption data-i18n="history.caption5">De gevelsteen van 1824, nog steeds in de voorgevel</figcaption>
+            </figure>
+          </div>
+          <div class="history-copy">
+            <p class="section-kicker" data-i18n="history.kicker">Sinds 1824</p>
+            <h2 data-i18n="history.title">Dineren, in een<br /><em>monument.</em></h2>
+            <p data-i18n="history.p1">De Waag was de weegschaal van een kolonie. Na de grote stadsbrand van 1821 bouwde Paramaribo eerst zijn havenwaag weer op: gouverneur Abraham de Veer legde in 1822 de eerste steen, en vanaf 1824 kruiste alles wat de kolonie verscheepte — en wat met de schepen aankwam — deze weegschaal, gewogen in Amsterdamse ponden zodat accijns geheven kon worden, tot het metrieke stelsel in 1871 de rivier bereikte.</p>
+            <p data-i18n="history.p2">Toen de haven in de jaren zestig stroomopwaarts verhuisde, werden de oude weegschalen stil en raakte het gebouw in verval.</p>
+            <p data-i18n="history.p3">Een particuliere restauratie, voltooid in 2002, gaf de weeghal een nieuw vak: koken, schenken en de Waterkant levendig houden. Het huis draagt nog steeds zijn gevelsteen uit 1824 — en het adres maakt deel uit van de historische binnenstad van Paramaribo, UNESCO-werelderfgoed.</p>
+            <ul class="history-facts">
+              <li data-i18n="history.fact1"><span>1824</span>Gebouwd als stadsweeghuis na de brand van 1821</li>
+              <li data-i18n="history.fact2"><span>1871</span>Gewogen in Amsterdamse ponden (494&nbsp;g) tot het metrieke stelsel</li>
+              <li data-i18n="history.fact3"><span>2002</span>UNESCO-werelderfgoed — historische binnenstad van Paramaribo</li>
+            </ul>
+            <blockquote class="history-quote" data-i18n="history.quote">“Wat tijd of noodlot verwoestte, is door vlijt en edele moed hersteld.”<cite>Gevelsteen, De Waag · 1824 · vrij vertaald</cite></blockquote>
+          </div>
         </div>
       </section>
-
+      <section id="flavours" class="flavours">
+        <div class="section-wrap flavours-top">
+          <p class="section-kicker" data-i18n="flavours.kicker">Aan tafel</p>
+          <p data-i18n="flavours.intro">Vertrouwde Surinaamse gerechten ontmoeten een keuken die graag reist. Begin ergens lekker en laat de avond de rest bepalen.</p>
+        </div>
+        <div class="flavour-cards section-wrap">
+          <article class="flavour-card card-image card-kitchen" aria-label="Een bord met gebakken biefstuk" data-i18n-attr="aria-label:flavours.card1Aria"><div class="card-copy"><span>01</span><h3 data-i18n="flavours.card1Title">Uit de keuken</h3><p data-i18n="flavours.card1Copy">Royale borden, vol van smaak.</p></div></article>
+          <article class="flavour-card card-image card-linger" aria-label="Een gedekte tafel om lang bij te blijven zitten" data-i18n-attr="aria-label:flavours.card2Aria"><div class="card-image-fill"></div><div class="card-copy"><span>02</span><h3 data-i18n="flavours.card2Title">Om bij te blijven zitten</h3><p data-i18n="flavours.card2Copy">Goed eten, goed gezelschap en nog een rondje.</p></div></article>
+          <article class="flavour-card card-image card-bar" aria-label="Een bartender die een cocktail bereidt" data-i18n-attr="aria-label:flavours.card3Aria"><div class="card-copy"><span>03</span><h3 data-i18n="flavours.card3Title">Uit de bar</h3><p data-i18n="flavours.card3Copy">Perfect uitgebalanceerde cocktails, geschonken met een vleugje theater.</p></div></article>
+        </div>
+      </section>
       <section id="menu" class="menu">
         <div class="menu-head section-wrap">
-          <p class="section-kicker">The Menu</p>
-          <h2>Breakfast, lunch, dinner —<br />and the bar that keeps the Waterkant <em>talking.</em></h2>
+          <p class="section-kicker" data-i18n="menu.kicker">De menukaart</p>
+          <h2 data-i18n="menu.title">Ontbijt, lunch, diner —<br />en de bar die de Waterkant <em>doet praten.</em></h2>
         </div>
 
-        <nav class="menu-tabs" aria-label="Menu categories"></nav>
+        <nav class="menu-tabs" aria-label="Menucategorieën" data-i18n-attr="aria-label:menu.tabsAria"></nav>
 
         <div class="menu-panels" aria-live="polite"></div>
 
-        <p class="menu-foot section-wrap">Dine-in prices exclude an 8% service charge and 10% tax. Please ask our team about allergens and gluten-free options.</p>
+        <p class="menu-foot section-wrap" data-i18n="menu.foot">Prijzen bij consumptie in het restaurant zijn exclusief 8% servicekosten en 10% belasting. Vraag ons team naar allergenen en glutenvrije opties.</p>
       </section>
+
       <section id="occasions" class="occasions section-wrap">
-        <div class="occasion-image" aria-label="Friends gathering at Roline's De Waag">
+        <div class="occasion-image" aria-label="Vrienden samen bij Roline's De Waag" data-i18n-attr="aria-label:occasions.imageAria">
           <div class="occasion-slide active" style="background-image:url('Afbeeldingen/659774366_963594126204005_5778358983752804853_n.jpg');"></div>
           <div class="occasion-slide" style="background-image:url('Afbeeldingen/658149259_963594346203983_236919956082679564_n.jpg');"></div>
           <div class="occasion-slide" style="background-image:url('Afbeeldingen/661633721_963594409537310_3972910032539082443_n.jpg');"></div>
@@ -90,62 +135,60 @@
           <div class="occasion-slide" style="background-image:url('Afbeeldingen/722974374_1024508543445896_2102648398245393093_n.jpg');"></div>
         </div>
         <div class="occasion-copy">
-          <p class="section-kicker">Gather here</p>
-          <h2>Your people,<br />your <em>occasion.</em></h2>
-          <p>From after-work drinks to intimate celebrations and private dining, we make space for the moments that deserve attention.</p>
-          <a class="button button-dark" href="#visit">Ask about private dining <span>→</span></a>
+          <p class="section-kicker" data-i18n="occasions.kicker">Onderons</p>
+          <h2 data-i18n="occasions.title">Jouw mensen,<br />jouw <em>gelegenheid.</em></h2>
+          <p data-i18n="occasions.copy">Van een borrel na het werk tot intieme vieringen en privédining: wij maken ruimte voor de momenten die aandacht verdienen.</p>
+          <a class="button button-dark" href="#visit" data-i18n="occasions.cta">Vraag naar privédining <span>→</span></a>
         </div>
       </section>
-
       <section id="reserve" class="reservation section-wrap" aria-labelledby="reserve-title">
         <div class="reservation-intro">
-          <p class="section-kicker">Reserve</p>
-          <h2 id="reserve-title">Plan your evening with us.</h2>
-          <p>Choose your date, preferred time, and the mood you want to set. We’ll take it from there.</p>
+          <p class="section-kicker" data-i18n="reserve.kicker">Reserveren</p>
+          <h2 id="reserve-title" data-i18n="reserve.title">Plan je avond bij ons.</h2>
+          <p data-i18n="reserve.intro">Kies je datum, gewenste tijd en de sfeer die je voor ogen hebt. Wij regelen de rest.</p>
         </div>
 
         <form id="reservation-form" class="reservation-form">
           <div class="field-row">
             <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Your name" required />
+              <span data-i18n="form.name">Naam</span>
+              <input type="text" name="name" placeholder="Jouw naam" data-i18n-attr="placeholder:form.namePh" required />
             </label>
             <label>
-              <span>Email</span>
+              <span data-i18n="form.email">E-mail</span>
               <input type="email" name="email" placeholder="your@email.com" required />
             </label>
           </div>
 
           <div class="field-row">
             <label>
-              <span>Date</span>
+              <span data-i18n="form.date">Datum</span>
               <input type="date" name="date" required />
             </label>
             <label>
-              <span>Time</span>
+              <span data-i18n="form.time">Tijd</span>
               <input type="time" name="time" required />
             </label>
             <label>
-              <span>Guests</span>
+              <span data-i18n="form.guests">Gasten</span>
               <select name="guests" required>
-                <option value="">Select</option>
-                <option value="2 Guests">2 Guests</option>
-                <option value="4 Guests">4 Guests</option>
-                <option value="6 Guests">6 Guests</option>
-                <option value="8 Guests">8 Guests</option>
-                <option value="10+ Guests">10+ Guests</option>
+                <option value="" data-i18n="form.select">Kies</option>
+                <option value="2 Guests" data-i18n="form.guests2">2 gasten</option>
+                <option value="4 Guests" data-i18n="form.guests4">4 gasten</option>
+                <option value="6 Guests" data-i18n="form.guests6">6 gasten</option>
+                <option value="8 Guests" data-i18n="form.guests8">8 gasten</option>
+                <option value="10+ Guests" data-i18n="form.guests10">10+ gasten</option>
               </select>
             </label>
           </div>
-
           <label>
-            <span>Notes</span>
-            <textarea name="notes" rows="4" placeholder="Tell us about your occasion, seating preference, or any special requests."></textarea>
+            <span data-i18n="form.notes">Opmerkingen</span>
+            <textarea name="notes" rows="4" placeholder="Vertel ons over je gelegenheid, zitvoorkeur of speciale wensen." data-i18n-attr="placeholder:form.notesPh"></textarea>
           </label>
 
           <div class="reservation-actions">
-            <button class="button button-dark" type="submit">Place reservation <span>→</span></button>
-            <a class="text-link" href="tel:+597520333">Or call +597 520333 <span>→</span></a>
+            <button class="button button-dark" type="submit" data-i18n="form.submit">Reservering plaatsen <span>→</span></button>
+            <a class="text-link" href="tel:+597520333" data-i18n="form.call">Of bel +597 520333 <span>→</span></a>
           </div>
           <p class="form-status" aria-live="polite"></p>
         </form>
@@ -153,26 +196,27 @@
 
       <section id="visit" class="visit">
         <div class="visit-copy">
-          <p class="section-kicker">Come by</p>
-          <h2>Waterkant 5,<br /><em>Paramaribo.</em></h2>
-          <p>Restaurant · Bar · Terrace · Private dining</p>
+          <p class="section-kicker" data-i18n="visit.kicker">Kom langs</p>
+          <h2 data-i18n="visit.title">Waterkant 5,<br /><em>Paramaribo.</em></h2>
+          <p data-i18n="visit.services">Restaurant · Bar · Terras · Privédining</p>
           <div class="visit-actions">
-            <a class="button button-light" href="tel:+597520333">Call +597 520333 <span>→</span></a>
-            <a class="button button-light" href="https://www.instagram.com/rolinesdewaag" target="_blank" rel="noreferrer">Follow on Instagram <span>↗</span></a>
-            <a class="text-link light-link" href="https://www.facebook.com/profile.php?id=100076602788159" target="_blank" rel="noreferrer">Visit Facebook <span>↗</span></a>
+            <a class="button button-light" href="tel:+597520333" data-i18n="visit.call">Bel +597 520333 <span>→</span></a>
+            <a class="button button-light" href="https://www.instagram.com/rolinesdewaag" target="_blank" rel="noreferrer" data-i18n="visit.instagram">Volg op Instagram <span>↗</span></a>
+            <a class="text-link light-link" href="https://www.facebook.com/profile.php?id=100076602788159" target="_blank" rel="noreferrer" data-i18n="visit.facebook">Bekijk Facebook <span>↗</span></a>
           </div>
         </div>
-        <p class="visit-side">Come hungry. Leave with a story.</p>
+        <p class="visit-side" data-i18n="visit.side">Kom met honger. Vertrek met een verhaal.</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <a class="wordmark footer-mark" href="#top"><span>Roline's</span><small>DE WAAG</small></a>
-      <p>Authentic Surinamese and international cuisine.</p>
-      <a class="text-link" href="#top">Back to top <span>↑</span></a>
+      <p data-i18n="footer.tagline">Authentieke Surinaamse en internationale keuken.</p>
+      <a class="text-link" href="#top" data-i18n="footer.back">Terug naar boven <span>↑</span></a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="translations.js"></script>
     <script src="menu-data.js"></script>
     <script src="script.js"></script>
   </body>
